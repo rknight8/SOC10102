@@ -1,0 +1,18 @@
+---
+# FRONT MATTER MATTERS
+---
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+
+  main {
+    flex: 1;
+  }
+
+  footer {
+    background-color: rebeccapurple;
+  }
+}
