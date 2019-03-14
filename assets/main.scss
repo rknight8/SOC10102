@@ -7,12 +7,19 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
+  background-color: #D3D3D3;
+
+hr {
+  width: 80%;
+  border: none;
+  border-top: 1px dotted black
+}
 
   main {
     flex: 1;
   }
 
   footer {
-    background-color: rebeccapurple;
+    color: #23203B;
   }
 }
