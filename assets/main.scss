@@ -1,24 +1,10 @@
 ---
 # FRONT MATTER MATTERS
 ---
-body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  background-color: #D3D3D3;
+@import "layout";
+@import "typography";
+@import "primarynav";
+@import "footer";
 
-hr {
-  width: 90%;
-  border: none;
-  border-top: 2px dotted #ACAEAF;
-}
-
-  main {
-    flex: 1;
-  }
-
-  footer {
-    color: #23203B;
-  }
-}
+// import styles
+@import url('https://fonts.googleapis.com/css?family=Oswald');

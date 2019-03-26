@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  background-color: #D3D3D3;
+
+hr {
+  width: 90%;
+  border: none;
+  border-top: 2px dotted #ACAEAF;
+}
+
+  main {
+    flex: 1;
+  }
+
+}
+
+// screen size vaiables
+$medium-screen: 480px;
+$large-screen: 7568px;
+
+// global body padding
+$body-padding-small: 0 2rem;
+$body-padding-medium: 0 3rem;
+$body-padding-large: 0 4rem;
+
+.body-padding {
+  padding: $body-padding-small;
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .body-padding {
+    padding: $body-padding-medium;
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  .body-padding {
+    padding: $body-padding-large;
+  }
+}
