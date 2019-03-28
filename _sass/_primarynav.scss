@@ -9,6 +9,26 @@
   }
   a {
     text-decoration: none;
+    display: inline-block;
     color: #354D5E;
+    padding: 2rem 0;
+    svg {
+      width: 3rem;
+      height: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .primarynav ul a svg {
+    width: 6rem;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  .primarynav ul a svg {
+    width: 10rem;
+    height: auto;
   }
 }
