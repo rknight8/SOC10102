@@ -1,0 +1,17 @@
+// global link button
+.link-button, .link-button-ghost {
+  padding: 0.5rem 2rem;
+  border-radius: 100rem;
+  border: 0.2rem solid $ocean-blue;
+}
+
+.link-button {
+  background-color: $ocean-blue;
+  text-decoration: none;
+  color: $text-blue;
+}
+
+.link-button-ghost {
+  text-decoration: none;
+  color: #FFF;
+}

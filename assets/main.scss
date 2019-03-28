@@ -1,10 +1,18 @@
 ---
 # FRONT MATTER MATTERS
 ---
+
+// global colours
+$ocean-blue: #14C0D7;
+$text-blue: #0E233B;
+
 @import "layout";
+@import "footer";
 @import "typography";
 @import "primarynav";
-@import "footer";
+@import "splash";
+@import "components";
+
 
 // import styles
 @import url('https://fonts.googleapis.com/css?family=Oswald');

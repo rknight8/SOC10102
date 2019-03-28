@@ -41,3 +41,12 @@ $body-padding-large: 0 4rem;
     padding: $body-padding-large;
   }
 }
+
+// global classes
+.flex-row {
+  display: flex;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
