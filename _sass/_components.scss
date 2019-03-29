@@ -15,3 +15,11 @@
   text-decoration: none;
   color: $text-grey;
 }
+
+.header-seperator {
+  width: 30%;
+  border: 0.2rem solid $ocean-blue;
+  display: inline-block;
+  border-radius: 100rem;
+  margin-top: 0;
+}

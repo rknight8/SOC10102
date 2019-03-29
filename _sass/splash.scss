@@ -1,18 +1,3 @@
-// .splash-content {
-//   height: 100%;
-//   img {
-//     height: 25rem;
-//     width: auto;
-//     margin: auto 0;
-//   }
-//   div {
-//     height: 25rem;
-//     width: 40vw;
-//     margin: auto 0;
-//   }
-// }
-
-
 .splash-content {
   &>img {
     width: 60vw;
@@ -20,6 +5,12 @@
   }
   .splash-link-container a:not(:first-child){
     margin-left: 1rem;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+  h2 {
+    margin-top: 0;
   }
 }
 
