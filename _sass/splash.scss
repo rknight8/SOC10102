@@ -1,7 +1,9 @@
 .splash-content {
+  display: flex;
+  flex-direction: column;
   &>img {
-    width: 60vw;
-    margin: 0 auto;
+    width: 70%;
+    margin: auto;
   }
   .splash-link-container a:not(:first-child){
     margin-left: 1rem;
@@ -16,4 +18,20 @@
 
 .splash-link-container {
   margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: $large-screen) {
+  .splash-content {
+    flex-flow: row wrap;
+    &>img {
+      width: 30rem;
+    }
+    &>div.flex-column {
+      padding: 0 0 0 4rem;
+      flex: 1;
+      div {
+        margin: auto 0;
+      }
+    }
+  }
 }

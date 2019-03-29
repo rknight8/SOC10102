@@ -26,16 +26,30 @@
   }
 }
 
-// media query for desktop 
+// media query for desktop
 @media only screen and (min-width: $medium-screen) {
-  .primarynav ul a svg {
-    width: 6rem;
+  .primarynav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    ul {
+      flex: 0.5;
+      li a {
+        padding: 2rem 1rem;
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  .primarynav a svg {
+    width: 5.8rem;
     height: auto;
   }
 }
 
 @media only screen and (min-width: $large-screen) {
-  .primarynav ul a svg {
+  .primarynav a svg {
     width: 10rem;
     height: auto;
   }

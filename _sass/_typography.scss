@@ -10,11 +10,28 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+// global font sizes
 p {
+  font-size: 1.1rem;
   line-height: 1.75;
   color: $text-grey;
 }
 
 footer {
   font-size: 0.75rem;
+}
+
+
+// Medium screens
+@media only screen and (min-width: $medium-screen) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+// Large screens
+@media only screen and (min-width: $large-screen) {
+  h1 {
+    font-size: 4rem;
+  }
 }
