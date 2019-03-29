@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{site.baseurl}}assets/main.css">
   </head>
@@ -9,12 +10,12 @@
   <body>
 
     <nav class="primarynav body-padding">
+      <a href="/">{% include logo/logo_outline.svg %}</a>
       <ul>
-        <li><a href="/">{% include logo/logo_outline.svg %}</a></li>
         <li><a href="/">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/launch">Launch</a></li>
-        <li><a href="/guide">How to Play</a></li>
+        <li><a href="/guide">Guide</a></li>
       </ul>
     </nav>
 
