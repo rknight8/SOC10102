@@ -2,10 +2,19 @@ h1, h2, h3, h4, h5, h6, .link-button, .link-button-ghost {
   font-family: 'Oswald', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: $text-grey;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 p {
   line-height: 1.75;
+  color: $text-grey;
+}
+
+footer {
+  font-size: 0.75rem;
 }

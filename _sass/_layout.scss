@@ -3,13 +3,7 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  background-color: #D3D3D3;
-
-hr {
-  width: 90%;
-  border: none;
-  border-top: 2px dotted #ACAEAF;
-}
+  background-color: $text-blue;
 
   main {
     flex: 1;

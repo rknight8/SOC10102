@@ -1,3 +1,6 @@
 footer {
   color: #23203B;
+  p {
+    border-top: 0.08rem dashed $text-grey;
+  }
 }
