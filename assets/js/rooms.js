@@ -1,8 +1,8 @@
 var rooms = {
   "start": {
-    "introduction": "You wake to the sound of an alarm. The ground beneath you shakes as you steady yourself against a wall. You recognise the alarm as the one to abandon ship. You remember there being an escape pod on the upper deck. You need escape G-34B.",
-    "action": {
-      "look around": "crewQuarters"
+    "description": "You wake to the sound of an alarm. The ground beneath you shakes as you steady yourself against a wall. You recognise the alarm as the one to abandon ship. You remember there being an escape pod on the upper deck. You need escape G-34B.",
+    "direction": {
+      "get up": "crewQuarters"
     }
   },
 
@@ -26,7 +26,9 @@ var rooms = {
   "eastDoor1": {
     "description": "You approach the door expecting it to open automatically but it does not. To you right, there is a panel with a button that reads: In case of emergency, push to open.",
     "action": {
-      "look around": "crewQuarters",
+      "look around": "crewQuarters"
+    },
+      "direction": {
       "push button": "button"
       }
   },
