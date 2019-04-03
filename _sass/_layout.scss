@@ -27,6 +27,10 @@ $body-padding-large: 0 4rem;
 }
 
 @media only screen and (min-width: $medium-screen) {
+  body {
+    background-image: url($baseurl + "/assets/img/background_largeScreen.svg");
+    background-position: left top;
+  }
   .body-padding {
     padding: $body-padding-medium;
   }

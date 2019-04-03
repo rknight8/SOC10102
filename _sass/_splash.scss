@@ -20,14 +20,22 @@
   margin-bottom: 2rem;
 }
 
+@media only screen and (min-width: $medium-screen) {
+  .splash-content img {
+    width: 15rem;
+  }
+}
+
 @media only screen and (min-width: $large-screen) {
   .splash-content {
-    flex-flow: row wrap;
+    margin-top: 3rem;
+    flex-flow: row;
     &>img {
-      width: 30rem;
+      width: 29rem;
+      margin: auto;
     }
     &>div.flex-column {
-      padding: 0 0 0 4rem;
+      padding: 0 0 0 10rem;
       flex: 1;
       div {
         margin: auto 0;
