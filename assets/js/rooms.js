@@ -1,8 +1,8 @@
 var rooms = {
   "start": {
     "description": "You wake to the sound of an alarm. The ground beneath you shakes as you steady yourself against a wall. You recognise the alarm as the one to abandon ship. You remember there being an escape pod on the upper deck. You need escape G-34B.",
-    "direction": {
-      "get up": "crewQuarters"
+    "action": {
+      "look around": "crewQuarters"
     }
   },
 
