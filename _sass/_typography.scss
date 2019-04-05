@@ -1,3 +1,17 @@
+// font for terminal
+.terminal-content {
+  font-family: monospace;
+  #user-input {
+    font-family: monospace;
+    color: $text-grey;
+  }
+}
+
+button#start {
+  color: $text-grey;
+}
+
+// global fonts
 h1, h2, h3, h4, h5, h6, .link-button, .link-button-ghost {
   font-family: 'Oswald', sans-serif;
 }

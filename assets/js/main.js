@@ -27,7 +27,7 @@ function showInventory() {
   $('#game-text').append('</ul></p>');
 }
 
-// function to examine an item
+// function to examine
 function checkItem(){
 if(rooms[currentRoom].item !== undefined){
   $('#game-text').append("<p>" + rooms[currentRoom].item.description + "</p>");
@@ -53,11 +53,16 @@ function playerInput(input) {
       break;
     default:
     $('#game-text').append("<p>Invalid command!</p>");
-}
-
+  }
 }
 
 $(document).ready(function(){
+  $('.game-intro').fadeIn('slow');
+  $('#start').click(function() {
+    $('#game-container').show();
+    $('.game-intro').hide();
+  });
+
   $('#game-text').append("<p>" + rooms.start.description + "</p>");
 
   $(document).keypress(function(key){

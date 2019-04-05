@@ -2,4 +2,15 @@
    h1 {
     margin-bottom: 0;
   }
+  #game-container {
+    display: none;
+  }
+  button#start {
+    background: none;
+    border: none;
+  }
+  #user-input {
+    background-color: transparent;
+    border: none;
+  }
 }
