@@ -13,19 +13,27 @@ function changeRoom(dir) {
       }
 }
 
-
 // function for inventory
 function showInventory() {
   if(inventory.length === 0) {
     $('#game-text').append("<p>You are not carrying anything:</p>");
     return;
-  }
+    }
   $('#game-text').append("<p>Inventory:</p>");
   $('#game-text').append("<p><ul>");
   for(var i=0; i < inventory.length; i ++) {
     $('#game-text').append("<li>" + inventory[i] + "</li>");
   }
   $('#game-text').append('</ul></p>');
+}
+
+// function to examine an item
+function checkItem(){
+if(rooms[currentRoom].item !== undefined){
+  $('#game-text').append("<p>" + rooms[currentRoom].item.description + "</p>");
+} else {
+  $('#game-text').append("<p>There is nothing of interest</p>");
+  }
 }
 
 
@@ -36,6 +44,9 @@ function playerInput(input) {
     case "go":
       var dir = input.split(" ")[1];
       changeRoom (dir);
+      break;
+    case "examine":
+      checkItem();
       break;
     case "inventory":
       showInventory();

@@ -8,43 +8,31 @@ var rooms = {
 
   "crewQuarters": {
     "description": "You seem to be in the crew’s quarters. Four beds occupy the otherwise empty room. The light from the alarm dances across the room. There is a door on the east wall.",
-    "examine": {
-      "look": "easterEgg"
+    "item": {
+      "description": "Upon closer inspection of one of the beds, there is photo of a man with a bowl cut and a large set of teeth. Writing underneath the photograph reads “Dwayne Dibley”."
     },
     "direction": {
       "east": "eastDoor1"
       }
   },
 
-  "easterEgg": {
-    "description": "Upon closer inspection of one of the beds, there is photo of a man with a bowl cut and a large set of teeth. Writing underneath the photograph reads “Dwayne Dibley”.",
-    "examine": {
-      "room": "crewQuarters"
-      }
-  },
-
   "eastDoor1": {
     "description": "You approach the door expecting it to open automatically but it does not. To you right, there is a panel with a button that reads: In case of emergency, push to open.",
-    "examine": {
-      "room": "crewQuarters"
-    },
-      "direction": {
-      "push": "button"
+      "action": {
+        "push": "button"
       }
   },
 
   "button": {
-    "description": "The door lifts open with a whoosh and as you enter the dimly lit corridor you notice smoke above you. You won’t survive long here.",
-    "action": {
-      "room": "corridor1",
-    },
+    "description": "The door lifts open with a whoosh. It seems to lead to a corridor.",
     "direction": {
+      "to corridor": "corridor1",
       "back": "crewQuarters"
     }
   },
 
   "corridor1": {
-    "description": "Looking around, there are two doors at the end of a narrow corridor, one to the west and another to the east. In the middle of the corridor is a ladder. You don’t think you can go up the ladder without some sort of equipment to protect you.",
+    "description": "As you enter the narrow corridor you notice two doors, one to the west and another to the east. In the middle of the corridor is a ladder where thick smoke seems to billowing out. You don’t think you can go up the ladder without some sort of equipment.",
     "direction": {
       "ladder": "ladderEnd",
       "back": "crewQuarters",
@@ -54,14 +42,11 @@ var rooms = {
   },
 
   "ladderEnd": {
-    "description": "As you look up you notice smoke billowing out from a hole in the ceiling. You decide to go up anyway. You reach the top of the ladder; the smoke is thick here. Covering you mouth with your sleeve the smoke makes your eyes sting. It doesn’t take long for you to lose all sense of direction and the world slowly fades to black. END"
+    "description": "As you look at the ladder you notice the smoke coming from the top. You decide to go climb up anyway. As you climb up the smoke makes your eyes sting and clogs up your lungs. Although you manage to get to the upper deck you feel dizzy and lose consciousness. END"
   },
 
   "lockedDoor": {
     "description": "You approach the east door and press the button — nothing happens. You push the button again, but the door doesn’t budge. Looks like the door is stuck. The west door you saw earlier is behind you.",
-    "examine": {
-      "room": "corridor1"
-    },
     "direction": {
       "ladder": "ladderEnd",
       "west": "kitchenDoor"
@@ -102,46 +87,21 @@ var rooms = {
     "direction": {
       "vent": "vent1"
     },
-    "items": {
-      "equipment": ""
+    "item": {
+      "equipment": "Most of the equipment looks broken but you manage to salvage a gas mask with a cracked eye lens and a wrench."
     }
   },
 
-  "vent1": {
-    "description": "You go over to the vent. As you try to open it you notice the vent is secured with four bolts. It looks like you will need some tools to open it.",
-    "examine": {
-      "room": "kitchen2",
-      "equipment": "equipmentAquire"
-    }
-  },
-
-  "equipmentAquire": {
-    "description": "Most of the equipment looks broken but you manage to salvage a gas mask with a cracked eye lens and a wrench.",
-    "action": {
-      "search": "kitchen2"
-    },
-    "direction": {
-      "vent": "vent2"
-    }
-  },
 
   "vent2": {
-    "description": "With the door jammed you take your chances with the small vent. It is secured on the wall with four bolts.",
+    "description": "With the door jammed you take your chances with the small vent. It is secured on the wall with four bolts. A wrench might be useful here.",
     "action": {
       "wrench": "corridorSmoke"
-    },
-  },
-
-  "corridorSmoke": {
-    "description": "Using the wrench, you managed to take the cover off the vent and climb through. You end up in the same corridor you were in previously. The smoke has gotten considerably worse. A gas mask would be useful here.",
-    "action": {
-      "search": "corriderSmokeDes",
-      "mask": "corridorMask"
     }
   },
 
-  "corridorSmokeDes": {
-    "description": "You cannot see much in front of you. As far as you can tell the corridor looks the same as it did before only with considerably more smoke. It’s not safe to move without something to protect you from the smoke.",
+  "corridor2": {
+    "description": "Using the wrench, you managed to take the cover off the vent and climb through. You end up in the same corridor you were in previously. The smoke has gotten considerably worse. A gas mask would be useful here.",
     "action": {
       "mask": "corridorMask"
     }
@@ -155,27 +115,20 @@ var rooms = {
   },
 
   "ladder2": {
-    "description": "You climb the ladder with little difficulty and manage to pull yourself up to the upper deck of the ship. You can hardly see a thing. You remember there being escape pods nearby.",
-    "action": {
-      "search": "corridorUpper"
-    }
-  },
-
-  "corridorUpper": {
-    "description": "You try to focus on your surroundings, but it is hard to see anything through the thick smoke. On the north-east wall you see an open door. Through your mask you can smell something burning. You need to leave this place.",
+    "description": "You climb the ladder with little difficulty and pull yourself up onto the upper deck. On the north wall you see an open door. Through your mask you can smell something burning. You should leave this place.",
     "direction": {
-      "door": "escapeRoom"
+      "north": "escapeRoom"
     }
   },
 
   "escapeRoom": {
-    "description": "Stumbling across the corridor you make it to the door. There is smoke everywhere and the alarm continues to sound. The ship starts to tilt, and you sway on your feet trying to stay upright. Looking ahead, you notice one escape pod left in the room. The other crew members must have made it off the ship. You need to do the same.",
+    "description": "Stumbling across the corridor you make it to the door. There is smoke everywhere and the alarm continues to sound. The ship starts to tilt, and you sway on your feet trying to stay upright. Looking ahead, you notice one escape pod left in the room to the east. The other crew members must have made it off the ship. You need to do the same.",
     "direction": {
-      "escape": "endingGood"
+      "east": "endingGood"
     }
   },
 
   "endingGood": {
-    "description": "Tripping over your feet you manage to secure yourself in the escape pod before something explodes in the corridor you were previously in. Hastily, you make sure the controls are correct. Although the gas mask makes it hard to see you manage to make sure everything is in order. Another crash. You are shaking as you hit the button that will deploy your escape pod. From your escape pod in space you see G-34B hurtling towards an unknown planet, the ship falling to pieces as it makes its decent. You take a few shaky breaths. You made it. You managed to escape cruiser ship G-34B."
+    "description": "Tripping over your feet you manage to secure yourself in the escape pod before something explodes in the corridor you were previously in. Hastily, you make sure the controls are correct. Although the gas mask makes it hard to see you manage to make sure everything is in order. Another crash. You are shaking as you hit the button that will deploy your escape pod. From your escape pod in space you see G-34B hurtling towards an unknown planet, the ship falling to pieces as it makes its decent. You take a few shaky breaths. You made it! You managed to escape cruiser ship G-34B!"
   }
 };
