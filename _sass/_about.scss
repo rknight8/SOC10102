@@ -8,4 +8,41 @@
   .logo-red {
     max-width: 100%;
   }
+
+  .header-seperator {
+    margin-bottom: 3rem;
+  }
+
+  #about-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,0.2);
+    &>div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: $medium-screen) {
+  #about-container {
+    max-width: 65vw;
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  #about-container {
+    max-width: 35rem;
+    img {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
 }
