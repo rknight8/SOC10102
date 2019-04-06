@@ -19,7 +19,7 @@ var rooms = {
   "eastDoor1": {
     "description": "You approach the door expecting it to open automatically but it does not. To you right, there is a panel with a button that reads: 'In case of emergency, <b>push button</b> to open'.",
       "action": {
-        "push": "The door lifts open with a whoosh. You enter a narrow <b>corridor</b>."
+        "push": "The door lifts open with a whoosh. You enter a narrow <b>corridor</b>. It might be worth <b>looking around</b>."
       },
       "direction": {
         "around": "corridor1",
@@ -29,7 +29,7 @@ var rooms = {
 
 
   "corridor1": {
-    "description": "As you enter notice <b>two doors</b>, one to the <b>west</b> and another to the <b>east</b>. In the middle of the corridor is a <b>ladder</b> where thick smoke is billowing from the ceiling.<b>You don’t think you can go up the ladder without some sort of equipment</b>.",
+    "description": "As you enter notice <b>two doors</b>, one to the <b>west</b> and another to the <b>east</b>. In the middle of the corridor is a <b>ladder</b> where thick smoke is billowing from the ceiling. <b>You don’t think you can go up the ladder without some sort of equipment to protect you</b>.",
     "direction": {
       "ladder": "ladderEnd",
       "back": "crewQuarters",
@@ -51,7 +51,7 @@ var rooms = {
   },
 
   "kitchenDoor": {
-    "description": "At the west door you notice another emergency panel. The writing on the panel is corroded, howeever the button might still work.. The alarm continues ringing in your ears and smoke is increasingly filling the room making it <b>impossible to turn back without any protection.</b>",
+    "description": "At the west door you notice another emergency panel. The writing on this panel is corroded, however the <b>pushing the button might still work</b>. The alarm continues to ring in your ears. Smoke fills the room making it <b>impossible to turn back without any protection.</b>",
     "action": {
       "push": "Pushing the button, the door starts to lift. It jams halfway from the floor. The ship suddenly shakes violently. You notice the door above you rattling in the doorway, threatening to drop. You need to decide if you want to <b>go forward</b> or <b>go back</b>."
     },
@@ -80,14 +80,11 @@ var rooms = {
     "direction": {
       "wrench": "corridor2",
       "back": "kitchen3"
-    },
-    "item": {
-      "description": "Most of the equipment looks broken but you manage to salvage a gas mask with a cracked eye lens and a wrench. You remember there being a <b>vent on the north wall</b>."
     }
   },
 
   "kitchen3": {
-    "description": "Looking around the small mess hall brings back happy memories. There's a <b>vent</b> on  the <b>north wall</b>. Some <b>emergency equipment</b> has been hastily stashed in one corner of the room. The noise of the alarm is a constant sound in your ears.",
+    "description": "Looking around the small mess hall brings back happy memories. There's a <b>vent</b> on the <b>north wall</b>. Some <b>emergency equipment</b> has been hastily stashed in one corner of the room. The noise of the alarm is a constant sound in your ears.",
     "direction": {
       "north": "vent2"
     },
@@ -120,7 +117,7 @@ var rooms = {
   "escapeRoom": {
     "description": "Stumbling across the corridor you make it to the door. There is smoke everywhere and the alarm continues to sound. The ship starts to tilt, and you sway on your feet trying to stay upright. Looking ahead, you notice <b>one escape pod left in the room to the east</b>. The other crew members must have made it off the ship. You need to do the same.",
     "direction": {
-      "east": "endingGood"
+      "escape": "endingGood"
     }
   },
 
