@@ -29,7 +29,7 @@ var rooms = {
 
 
   "corridor1": {
-    "description": "As you enter notice two doors, one to the west and another to the east. In the middle of the corridor is a ladder where thick smoke is billowing out. <b>You don’t think you can go up the ladder without some sort of equipment</b>.",
+    "description": "As you enter notice <b>two doors</b>, one to the <b>west</b> and another to the <b>east</b>. In the middle of the corridor is a <b>ladder</b> where thick smoke is billowing out. <b>You don’t think you can go up the ladder without some sort of equipment</b>.",
     "direction": {
       "ladder": "ladderEnd",
       "back": "crewQuarters",
@@ -51,20 +51,13 @@ var rooms = {
   },
 
   "kitchenDoor": {
-    "description": "You approach the door and notice another emergency panel beside the door. The writing on the panel is corroded. The alarm is still ringing in your ears.",
+    "description": "At the west door you notice another emergency panel. However, the writing on the panel is corroded. The alarm is still ringing in your ears. Smoke increasingly fills the room making it impossible to turn back without any protection.",
     "action": {
-      "push": "kitchenButton"
+      "push": "Pushing the button, the door starts to lift. It jams halfway from the floor. The ship suddenly shakes violently. You notice the door above you rattling in the doorway, threatening to drop. You need to decide if you want to go forward or go back."
     },
     "direction": {
-      "east": "lockedDoor"
-    }
-  },
-
-  "kitchenButton": {
-    "description": "Pushing the button, the door starts to lift. It jams halfway from the floor. The ship suddenly shakes violently. You notice the door above you rattling in the doorway, threatening to drop. You need to decide if you want to continue through the door or go back.",
-    "direction": {
       "back": "doorEnd",
-      "continue": "kitchen"
+      "forward": "kitchen2"
     }
   },
 
@@ -75,29 +68,42 @@ var rooms = {
   "kitchen2": {
     "description": "You continue onwards and manage to crawl under the door just before the door collapses. Looking around the small mess hall brings back happy memories. There's a <b>vent</b> on  the <b>north wall</b>. Some <b>emergency equipment</b> has been hastily stashed in one corner of the room. The noise of the alarm is a constant sound in your ears.",
     "direction": {
-      "vent": "vent1"
+      "north": "vent2"
     },
     "item": {
-      "equipment": "Most of the equipment looks broken but you manage to salvage a gas mask with a cracked eye lens and a wrench."
+      "equipment": "Most of the equipment looks broken but you manage to salvage a gas mask with a cracked eye lens and a wrench. You remember there being a vent on the north wall..."
     }
   },
 
-
   "vent2": {
     "description": "With the door jammed you take your chances with the small vent. It is secured on the wall with four bolts. A wrench might be useful here.",
-    "action": {
-      "wrench": "corridorSmoke"
+    "direction": {
+      "wrench": "corridor2",
+      "back": "kitchen3"
+    },
+    "item": {
+      "equipment": "Most of the equipment looks broken but you manage to salvage a gas mask with a cracked eye lens and a wrench. You remember there being a vent on the north wall..."
+    }
+  },
+
+  "kitchen3": {
+    "description": "Looking around the small mess hall brings back happy memories. There's a <b>vent</b> on  the <b>north wall</b>. Some <b>emergency equipment</b> has been hastily stashed in one corner of the room. The noise of the alarm is a constant sound in your ears.",
+    "direction": {
+      "north": "vent2"
+    },
+    "item": {
+      "equipment": "Most of the equipment looks broken but you manage to salvage a gas mask with a cracked eye lens and a wrench. You remember there being a vent on the north wall..."
     }
   },
 
   "corridor2": {
     "description": "Using the wrench, you managed to take the cover off the vent and climb through. You end up in the same corridor you were in previously. The smoke has gotten considerably worse. A gas mask would be useful here.",
-    "action": {
-      "mask": "corridorMask"
+    "direction": {
+      "mask": "corridor3"
     }
   },
 
-  "corridorMask": {
+    "corridor3": {
     "description": "Putting on the gas mask you can breathe normally. However, the smoke has greatly limited your vision. You remember the ladder being in the middle of the corridor. You don’t want to stay here any longer than necessary.",
     "direction": {
       "ladder": "ladder2"

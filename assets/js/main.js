@@ -30,7 +30,7 @@ function showInventory() {
 // function to examine
 function checkItem(){
 if(rooms[currentRoom].item !== undefined){
-  $('#game-text').append("<p>" + rooms[currentRoom].item.description + "</p>");
+  $('#game-text').append("<p>" + rooms[currentRoom].item.equipment + "</p>");
 } else {
   $('#game-text').append("<p>There is nothing of interest</p>");
   }
@@ -53,6 +53,7 @@ function playerInput(input) {
   switch(command) {
     case "go":
     case "look":
+    case "use":
       var dir = input.split(" ")[1];
       changeRoom (dir);
       break;
@@ -73,6 +74,8 @@ function playerInput(input) {
     $('#game-text').append("<p>Invalid command!</p>");
   }
 }
+
+document.querySelector("#game-container").scrollIntoView(false);
 
 $(document).ready(function(){
   $('.game-intro').fadeIn('slow');
