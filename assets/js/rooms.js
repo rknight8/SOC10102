@@ -1,15 +1,15 @@
 var rooms = {
   "start": {
-    "description": "You wake to the sound of an alarm. The ground beneath you shakes as you steady yourself against a wall. You recognise the alarm as the one to abandon ship. You remember there being an escape pod on the upper deck. You need escape G-34B.",
+    "description": "You wake to the sound of an alarm. The ground beneath you shakes as you steady yourself against a wall. You recognise the alarm as the one to abandon ship. You remember there being an escape pod on the <b>upper deck</b>. You need escape G-34B.",
     "direction": {
-      "room": "crewQuarters"
+      "around": "crewQuarters"
     }
   },
 
   "crewQuarters": {
-    "description": "You seem to be in the crew’s quarters. Four beds occupy the otherwise empty room. The light from the alarm dances across the room. There is a door on the east wall.",
+    "description": "You seem to be in the crew’s quarters. Four beds occupy the otherwise empty room. The light from the alarm dances across the room. There is a door on the <b>east wall</b>.",
     "item": {
-      "description": "Upon closer inspection of one of the beds, there is photo of a man with a bowl cut and a large set of teeth. Writing underneath the photograph reads “Dwayne Dibley”."
+      "description": "Upon closer inspection of one of the beds, there is photo of a man with a bowl cut and a large set of teeth. Writing underneath the photograph reads 'Dwayne Dibley'."
     },
     "direction": {
       "east": "eastDoor1"
@@ -17,22 +17,19 @@ var rooms = {
   },
 
   "eastDoor1": {
-    "description": "You approach the door expecting it to open automatically but it does not. To you right, there is a panel with a button that reads: In case of emergency, push to open.",
+    "description": "You approach the door expecting it to open automatically but it does not. To you right, there is a panel with a button that reads: 'In case of emergency, <b>push to open</b>'.",
       "action": {
-        "push": "button"
+        "push": "The door lifts open with a whoosh. You enter a narrow <b>corridor</b>."
+      },
+      "direction": {
+        "around": "corridor1",
+        "back": "crewQuarters"
       }
   },
 
-  "button": {
-    "description": "The door lifts open with a whoosh. It seems to lead to a corridor.",
-    "direction": {
-      "to corridor": "corridor1",
-      "back": "crewQuarters"
-    }
-  },
 
   "corridor1": {
-    "description": "As you enter the narrow corridor you notice two doors, one to the west and another to the east. In the middle of the corridor is a ladder where thick smoke seems to billowing out. You don’t think you can go up the ladder without some sort of equipment.",
+    "description": "As you enter notice two doors, one to the west and another to the east. In the middle of the corridor is a ladder where thick smoke is billowing out. <b>You don’t think you can go up the ladder without some sort of equipment</b>.",
     "direction": {
       "ladder": "ladderEnd",
       "back": "crewQuarters",
@@ -46,7 +43,7 @@ var rooms = {
   },
 
   "lockedDoor": {
-    "description": "You approach the east door and press the button — nothing happens. You push the button again, but the door doesn’t budge. Looks like the door is stuck. The west door you saw earlier is behind you.",
+    "description": "You approach the east door and press the button — nothing happens. You push the button again, but the door doesn’t budge. Looks like the door is stuck. The <b>west door</b> you saw earlier is behind you.",
     "direction": {
       "ladder": "ladderEnd",
       "west": "kitchenDoor"
@@ -75,15 +72,8 @@ var rooms = {
     "description": "You back away from the door to see it drop with a loud thud. You try pushing the button again, but nothing happens. Your eyes sting from the smoke and you start coughing. You try the other door in the corridor, but it is locked. You try to make it back to the crew quarters, but the smoke limits your vision. You stumble across the corridor only to collapse beside the ladder, the world fading before your eyes. -END-"
   },
 
-  "kitchen": {
-    "description": "You continue onwards and manage to crawl under the door just before the door collapses. As you push yourself off the ground you feel the ship vibrate underneath you. At this rate you’re not sure how the ship will last.",
-    "action": {
-      "room": "kitchen2"
-    }
-  },
-
   "kitchen2": {
-    "description": "Looking around the small mess hall brings back happy memories. There's a small vent shaft on the wall to your right. Some emergency equipment has been hastily stashed in one corner of the room. The noise of the alarm is a constant sound in your ears.",
+    "description": "You continue onwards and manage to crawl under the door just before the door collapses. Looking around the small mess hall brings back happy memories. There's a <b>vent</b> on  the <b>north wall</b>. Some <b>emergency equipment</b> has been hastily stashed in one corner of the room. The noise of the alarm is a constant sound in your ears.",
     "direction": {
       "vent": "vent1"
     },

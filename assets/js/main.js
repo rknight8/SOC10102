@@ -1,5 +1,5 @@
 var currentRoom = "start";
-var commands = ["go", "look", "action"];
+var commands = ["go", "push", "action"];
 var inventory = [];
 
 
@@ -16,7 +16,7 @@ function changeRoom(dir) {
 // function for inventory
 function showInventory() {
   if(inventory.length === 0) {
-    $('#game-text').append("<p>You are not carrying anything:</p>");
+    $('#game-text').append("<p>You are not carrying anything!</p>");
     return;
     }
   $('#game-text').append("<p>Inventory:</p>");
@@ -36,21 +36,39 @@ if(rooms[currentRoom].item !== undefined){
   }
 }
 
+// function to take an action e.g. push button
+function takeAction(){
+  if(rooms[currentRoom].action !== undefined){
+    $('#game-text').append("<p>" + rooms[currentRoom].action.push + "</p>");
+  } else {
+    $('#game-text').append("<p>Cannot do that here</p>");
+  }
+}
+
 
 // function & switch to take in player input
 function playerInput(input) {
   var command = input.split(" ")[0];
+
   switch(command) {
     case "go":
+    case "look":
       var dir = input.split(" ")[1];
       changeRoom (dir);
       break;
+
+    case "push":
+      takeAction();
+      break;
+
     case "examine":
       checkItem();
       break;
+
     case "inventory":
       showInventory();
       break;
+
     default:
     $('#game-text').append("<p>Invalid command!</p>");
   }
