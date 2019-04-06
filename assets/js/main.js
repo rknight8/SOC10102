@@ -1,5 +1,5 @@
 var currentRoom = "start";
-var commands = ["go", "push", "action"];
+var commands = ["look around", "go", "use", "examine"];
 var inventory = [];
 
 
@@ -45,6 +45,17 @@ function takeAction(){
   }
 }
 
+// function for help command
+function showHelp() {
+    $('#game-text').append("<p>List of possible commands: </p>");
+    $('#game-text').append("<p><ul>");
+    for (var i = 0; i < commands.length; i++) {
+        $('#game-text').append("<li>" + commands[i] + "</li>");
+    }
+    $('#game-text').append("</ul></p>");
+
+}
+
 
 // function & switch to take in player input
 function playerInput(input) {
@@ -68,6 +79,10 @@ function playerInput(input) {
 
     case "inventory":
       showInventory();
+      break;
+
+    case "help":
+      showHelp();
       break;
 
     default:

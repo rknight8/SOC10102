@@ -1,7 +1,41 @@
 .guide-content {
   display: flex;
   flex-direction: column;
-   h1 {
+  .guide-link-container a:not(:first-child){
+    margin-left: 1rem;
+  }
+  h1 {
     margin-bottom: 0;
+  }
+  h2 {
+    margin-top: 0;
+  }
+}
+
+.guide-link-container {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .guide-content img {
+    width: 15rem;
+  }
+}
+
+@media only screen and (min-width: $large-screen) {
+  .guide-content {
+    margin-top: 3rem;
+    flex-flow: row;
+    &>img {
+      width: 29rem;
+      margin: auto;
+    }
+    &>div.flex-column {
+      padding: 0 0 0 10rem;
+      flex: 1;
+      div {
+        margin: auto 0;
+      }
+    }
   }
 }

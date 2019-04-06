@@ -1,11 +1,9 @@
 // font for terminal
-.terminal-content {
+.terminal-content, #user-input, #game-text {
   font-family: monospace;
-  #user-input {
-    font-family: monospace;
-    color: $text-grey;
+  color: $text-grey;
+  font-size: 1.1rem;
   }
-}
 
 button#start {
   color: $text-grey;
@@ -32,7 +30,7 @@ body {
 }
 
 // global font sizes
-p {
+p  {
   font-size: 1.1rem;
   line-height: 1.75;
   color: $text-grey;
