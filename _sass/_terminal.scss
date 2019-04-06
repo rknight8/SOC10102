@@ -13,5 +13,29 @@
     background-color: transparent;
     border: none;
   }
+}
 
+.terminal-container {
+  margin: 0 1rem;
+}
+
+.terminal-content {
+  position: relative;
+  background-color: #222;
+  min-height: 30rem;
+  max-width: 50rem;
+  border-radius: 3rem;
+  padding: 1rem 1.5rem;
+  overflow-y: auto;
+}
+
+.game-intro, #game-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: $medium-screen) {
+  .terminal-content {
+    margin: 0 auto;
+  }
 }
