@@ -17,7 +17,7 @@ var rooms = {
   },
 
   "eastDoor1": {
-    "description": "You approach the door expecting it to open automatically but it does not. To you right, there is a panel with a button that reads: 'In case of emergency, <b>push to open</b>'.",
+    "description": "You approach the door expecting it to open automatically but it does not. To you right, there is a panel with a button that reads: 'In case of emergency, <b>push button</b> to open'.",
       "action": {
         "push": "The door lifts open with a whoosh. You enter a narrow <b>corridor</b>."
       },
@@ -39,11 +39,11 @@ var rooms = {
   },
 
   "ladderEnd": {
-    "description": "As you look at the ladder you notice the smoke coming from the top. You decide to go climb up anyway. As you climb up the smoke makes your eyes sting and clogs up your lungs. Although you manage to get to the upper deck you feel dizzy and lose consciousness. <b>END</b>"
+    "description": "As you look at the ladder you notice the smoke coming from the top. You decide to go climb up anyway. As you climb up the smoke makes your eyes sting and clogs up your lungs. Although you manage to get to the upper deck you feel dizzy and lose consciousness. <b>END.</b> Try Again?"
   },
 
   "lockedDoor": {
-    "description": "You approach the east door and press the button — nothing happens. You push the button again, but the door doesn’t budge. Looks like the door is stuck. The <b>west door</b> you saw earlier is behind you.",
+    "description": "You approach the east door and press the button on the emergency panel — nothing happens. You push the button again, but the door doesn’t budge. Looks like the door is stuck. The <b>west door</b> you saw earlier is behind you.",
     "direction": {
       "ladder": "ladderEnd",
       "west": "kitchenDoor"
@@ -51,7 +51,7 @@ var rooms = {
   },
 
   "kitchenDoor": {
-    "description": "At the west door you notice another emergency panel. However, the writing on the panel is corroded. The alarm is still ringing in your ears. Smoke increasingly fills the room making it <b>impossible to turn back without any protection.</b>",
+    "description": "At the west door you notice another emergency panel. The writing on the panel is corroded, howeever the button might still work.. The alarm continues ringing in your ears and smoke is increasingly filling the room making it <b>impossible to turn back without any protection.</b>",
     "action": {
       "push": "Pushing the button, the door starts to lift. It jams halfway from the floor. The ship suddenly shakes violently. You notice the door above you rattling in the doorway, threatening to drop. You need to decide if you want to <b>go forward</b> or <b>go back</b>."
     },
@@ -62,16 +62,16 @@ var rooms = {
   },
 
   "doorEnd": {
-    "description": "You back away from the door to see it drop with a loud thud. You try pushing the button again, but nothing happens. Your eyes sting from the smoke and you start coughing. You try the other door in the corridor, but it is locked. You try to make it back to the crew quarters, but the smoke limits your vision. You stumble across the corridor only to collapse beside the ladder, the world fading before your eyes. <b>END</b>"
+    "description": "You back away from the door to see it drop with a loud thud. You try pushing the button again, but nothing happens. Your eyes sting from the smoke and you start coughing. You try the other door in the corridor, but it is locked. You try to make it back to the crew quarters, but the smoke limits your vision. You stumble across the corridor only to collapse beside the ladder, the world fading before your eyes. <b>END.</b> Try Again?"
   },
 
   "kitchen2": {
-    "description": "You continue onwards and manage to crawl under the door just before the door collapses. Looking around the small mess hall brings back happy memories. There's a <b>vent</b> on  the <b>north wall</b>. Some <b>emergency equipment</b> has been hastily stashed in one corner of the room. The noise of the alarm is a constant sound in your ears.",
+    "description": "You continue onwards and manage to crawl under the door just before the door collapses. Looking around the small mess hall brings back happy memories. Some <b>emergency equipment</b> has been hastily stashed in one corner of the room. The noise of the alarm is a constant sound in your ears.",
     "direction": {
       "north": "vent2"
     },
     "item": {
-      "equipment": "Most of the equipment looks broken but you manage to salvage a <b>gas mask</b> with a cracked eye lens and a <b>wrench</b>. You remember there being a <b>vent on the north wall</b>."
+      "description": "Most of the equipment looks broken but you manage to salvage a <b>gas mask</b> with a cracked eye lens and a <b>wrench</b>. You notice a <b>vent on the north wall</b>."
     }
   },
 
@@ -82,7 +82,7 @@ var rooms = {
       "back": "kitchen3"
     },
     "item": {
-      "equipment": "Most of the equipment looks broken but you manage to salvage a gas mask with a cracked eye lens and a wrench. You remember there being a <b>vent on the north wall</b>."
+      "description": "Most of the equipment looks broken but you manage to salvage a gas mask with a cracked eye lens and a wrench. You remember there being a <b>vent on the north wall</b>."
     }
   },
 
@@ -92,14 +92,14 @@ var rooms = {
       "north": "vent2"
     },
     "item": {
-      "equipment": "Most of the equipment looks broken but you manage to salvage a <b>gas mask</b> with a cracked eye lens and a <b>wrench</b>. You remember there being a <b>vent on the north wall</b>."
+      "description": "Most of the equipment looks broken but you manage to salvage a <b>gas mask</b> with a cracked eye lens and a <b>wrench</b>. You remember there being a <b>vent on the north wall</b>."
     }
   },
 
   "corridor2": {
     "description": "Using the wrench, you managed to take the cover off the vent and climb through. You end up in the same corridor you were in previously. The smoke has gotten considerably worse. A <b>gas mask</b> would be useful here.",
     "direction": {
-      "mask": "corridor3"
+      "gas": "corridor3"
     }
   },
 

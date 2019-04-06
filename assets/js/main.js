@@ -1,5 +1,5 @@
 var currentRoom = "start";
-var commands = ["look around", "go", "use", "examine"];
+var commands = ["look around", "examine", "push button", "go north", "use item",];
 var inventory = [];
 
 
@@ -9,7 +9,7 @@ function changeRoom(dir) {
         currentRoom = rooms[currentRoom].direction[dir];
         $('#game-text').append("<p>" + rooms[currentRoom].description + "</p>");
     } else {
-        $('#game-text').append("<p>You cannot go that way!</p>");
+        $('#game-text').append("<p>You cannot do that.</p>");
       }
 }
 
@@ -30,7 +30,7 @@ function showInventory() {
 // function to examine
 function checkItem(){
 if(rooms[currentRoom].item !== undefined){
-  $('#game-text').append("<p>" + rooms[currentRoom].item.equipment + "</p>");
+  $('#game-text').append("<p>" + rooms[currentRoom].item.description + "</p>");
 } else {
   $('#game-text').append("<p>There is nothing of interest</p>");
   }
