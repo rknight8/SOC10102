@@ -122,6 +122,6 @@ var rooms = {
   },
 
   "endingGood": {
-    "description": "Tripping over your feet you manage to secure yourself in the escape pod before something explodes in the corridor you were previously in. Hastily, you make sure the controls are correct. Although the gas mask makes it hard to see you manage to make sure everything is in order. Another crash. You are shaking as you hit the button that will deploy your escape pod. From your escape pod in space you see G-34B hurtling towards an unknown planet, the ship falling to pieces as it makes its decent. You take a few shaky breaths. <b>You made it!</b> You managed to escape cruiser ship G-34B!"
+    "description": "Tripping over your feet you manage to secure yourself in the escape pod before something explodes in the corridor you were previously in. Hastily, you make sure the controls are correct. Although the gas mask makes it hard to see you manage to make sure everything is in order. Another crash. You are shaking as you hit the button that will deploy your escape pod. From your escape pod in space you see G-34B hurtling towards an unknown planet, the ship falling to pieces as it makes its decent. <b>You made it!</b> You managed to escape cruiser ship G-34B!"
   }
 };
